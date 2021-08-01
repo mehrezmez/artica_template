@@ -1158,6 +1158,7 @@ body {
 @media (max-width: 767px) {
     .contact .container form {
         flex-direction: column;
+        gap: 0;
     }
 }
 .contact .container form input {
@@ -1171,6 +1172,12 @@ body {
     padding: 10px 15px;
     background-color: var(--main-color);
     border: 1px solid white;
+}
+@media (max-width: 767px) {
+    .contact .container form input,
+    .contact .container form textarea  {
+        margin-bottom: 30px;
+    }
 }
 .contact .container form input::placeholder,
 .contact .container form textarea::placeholder  {
