@@ -389,6 +389,12 @@ body {
     text-align: center;
     position: relative;
 }
+@media (max-width: 767px) {
+    .portfolio .container .image .box {
+        display: flex;
+        align-self: center;
+    }   
+}
 .portfolio .container .image .box:nth-of-type(1)::before {
     content: "";   
     position: absolute;
@@ -809,7 +815,6 @@ body {
 @media (max-width:767px) {
     .under_skills .container {
         flex-wrap: wrap;
-        grid-row-gap: 30px;
     }
 }
 .under_skills .container .box {
@@ -833,6 +838,9 @@ body {
     .under_skills .container .box:nth-of-type(n+0) {
         justify-content: center;
         flex-basis: 50%;
+    }
+    .under_skills .container .box:nth-of-type(n+3) {
+        margin-top: 20px;
     }
 }
 .under_skills .container .box i {
@@ -998,7 +1006,7 @@ body {
 .blog .under_blog form {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    /* gap: 20px; */
 }
 .blog .under_blog form input {
     color: white;
@@ -1008,6 +1016,13 @@ body {
 }
 .blog .under_blog form input:nth-of-type(1) {
     flex-basis: 20%;
+    margin-right: 30px;
+}
+@media (max-width: 767px) {
+    .blog .under_blog form input:nth-of-type(1) {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }   
 }
 .blog .under_blog form input:nth-of-type(1)::placeholder {
     color: white;
