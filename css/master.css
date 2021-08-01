@@ -16,6 +16,7 @@
 }
 body {
     font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
 .container {
     margin: 0 auto;
@@ -108,6 +109,7 @@ body {
     justify-content: space-between;
     padding-top: 20px;
     padding-bottom: 20px;
+    position: relative;
 }
 .header .container .logo {
     display: flex;
@@ -123,10 +125,63 @@ body {
     flex-direction: column;
     gap: 2px;
 }
-.header .container ul.line li {
+.header .container ul.line li.active:not(:last-of-type) {
     background-color: black;
     width: 20px;
     height: 3px;
+}
+.header .container .line .hover {
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    top: 0;
+    left: 80%;
+    position: absolute;
+    padding: 10px 0 0 10px;
+    z-index: 2;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--main-color);
+    color: white;
+}
+@media (max-width: 767px) {
+    .header .container .line .hover {
+        left: 55%;
+    }
+}
+.header .container .line .hover .x {
+    text-align: end;
+    font-weight: bold;
+}
+.header .container .line .hover p {
+    font-size: 25px;
+    font-family: "molle", cursive;
+    font-weight: bold;
+    padding-right: 100px;
+}
+.header .container .line .hover ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 20px 0;
+}
+.header .container .line .hover ul li {
+    padding: 5px 0;
+}
+.header .container .line .hover ul li a {
+    text-decoration: none;
+    color: white;
+}
+.header .container .line .hover .icon {
+    display: flex;
+    gap: 20px;
+}
+.header .container .line:hover li.active {
+    display: none;
+}
+.header .container .line:hover .hover {
+    display: flex;
 }
 /*end header*/
 /*start main-header*/
